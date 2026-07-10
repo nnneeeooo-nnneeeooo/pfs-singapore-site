@@ -420,27 +420,64 @@
     .stat small { color: #050505; font-size: 16px; line-height: 1.35; }
 
     .beginnings {
-      width: min(var(--max), calc(100% - 76px));
+      width: 100%;
+      margin: 0;
+      padding: 34px 0 18px;
+      background: #c9cacc;
+      border-top: 1px solid var(--pink);
+    }
+
+    .beginnings-inner {
+      width: min(800px, calc(100% - 64px));
       margin: 0 auto;
-      padding: 84px 0 52px;
+    }
+
+    .beginnings h2 {
+      margin: 0 0 22px;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: clamp(34px, 3vw, 41px);
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .beginnings-top,
+    .beginnings-bottom {
       display: grid;
-      grid-template-columns: 43% 1fr;
-      gap: 63px;
+      grid-template-columns: 362px 1fr;
+      gap: 41px;
       align-items: start;
     }
 
+    .beginnings-bottom { margin-top: 29px; }
+
     .beginnings .image {
-      min-height: 488px;
-      background: url("https://images.squarespace-cdn.com/content/v1/5f5f154a6907c141ae06e408/71e42741-602b-45a7-991f-7df6db7eeb7b/Screenshot+2023-11-23+115043.png?format=1000w") center top / cover no-repeat;
+      width: 100%;
+      aspect-ratio: 1.38 / 1;
+      background: url("https://images.squarespace-cdn.com/content/v1/5f5f154a6907c141ae06e408/71e42741-602b-45a7-991f-7df6db7eeb7b/Screenshot+2023-11-23+115043.png?format=1000w") center / cover no-repeat;
     }
 
-    blockquote {
-      margin: 23px 0;
+    .beginnings .history-image {
+      width: 100%;
+      aspect-ratio: 1.85 / 1;
+      background: url("https://images.squarespace-cdn.com/content/v1/5f5f154a6907c141ae06e408/29784b95-7df9-455c-b2af-fc633f03ef1b/Screenshot+2023-11-23+115855.png?format=1000w") center / cover no-repeat;
+    }
+
+    .beginnings .copy {
+      color: #111;
+      font-size: 12px;
+      line-height: 1.58;
+    }
+
+    .beginnings .copy p { margin: 0 0 17px; }
+
+    .beginnings blockquote {
+      margin: 17px 0;
       color: var(--pink);
-      font-family: var(--display);
-      font-size: clamp(25px, 3vw, 37px);
+      font-family: Arial, sans-serif;
+      font-size: clamp(22px, 2vw, 25px);
       font-weight: 800;
-      line-height: 1.17;
+      line-height: 1.28;
     }
 
     .milestones {
@@ -708,7 +745,8 @@
         box-shadow: 0 18px 30px rgba(0,0,0,.2);
       }
       .mobile-panel a { padding: 7px 0; }
-      .intro-grid, .partners, .beginnings, .milestone-layout, .footer-inner { grid-template-columns: 1fr; }
+      .intro-grid, .partners, .milestone-layout, .footer-inner { grid-template-columns: 1fr; }
+      .beginnings-top, .beginnings-bottom { grid-template-columns: minmax(0, 1fr); }
       .vision-inner { grid-template-columns: 1fr; }
       .vision-copy { grid-column: auto; max-width: 590px; margin-left: auto; }
       .values { grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -724,9 +762,9 @@
       .vision-inner,
       .values,
       .impact-grid,
-      .beginnings,
       .milestones,
       .footer-inner { width: calc(100% - 32px); }
+      .beginnings-inner { width: calc(100% - 32px); }
       .hero { min-height: 400px; }
       .photo-mosaic { grid-template-columns: 1fr; }
       .photo.wide { grid-column: auto; aspect-ratio: 1.45 / 1; }
@@ -897,16 +935,23 @@
     </section>
 
     <section class="beginnings" id="stories">
-      <div class="image reveal" role="img" aria-label="Reverend Khoo Siaw Hua"></div>
-      <div class="copy reveal">
-        <h2 class="section-title">Our Beginnings</h2>
-        <p>Our journey can be traced back to the early 1950s. Secret society activities were rampant and the prisons held many gangsters behind bars. <strong><em>Reverend Khoo Siaw Hua</em></strong> (a Methodist pastor) received a letter from an English inspector working at Changi Prison, inviting him to be the pastor for the prison. In that letter were these famous words:</p>
-        <blockquote>&ldquo;These men fear no man nor law, but try to get them to fear God.&rdquo;</blockquote>
-        <p>Moved by the plea and led by the spirit, Reverend Khoo responded to that call and began his service in prison with the goal of conveying God&apos;s love to the convicts.</p>
-        <p>Reverend Khoo Siaw Hua served the prison community until his death in 1985. A decade before his passing, his son and successor, <strong><em>Reverend Henry Khoo</em></strong> was appointed Honorary Senior Chaplain and he continued his father&apos;s legacy by holding out the light of Christ at Changi Prison. As a teacher, he was posted to pioneer the Prison School. Despite his initial reluctance to be involved with prison work, he knew later that there was no &ldquo;getting around God&apos;s will&rdquo;. In 1968, he began his work in Changi Prison.</p>
-        <p>Through the pioneering work of Reverend Khoo Siaw Hua and the faithful labour of Reverend Henry Khoo, the prison ministry has come a long way since 1953. God has used both men to touch the lives of many. Today, Prison Fellowship Singapore has the privilege of working alongside our valued partners to continue this work.</p>
-        <p>We cannot do this work by ourselves and wish to recognise the contributions and support of our dedicated team of volunteers and eco-system partners, such as the Singapore Prison Service, Yellow Ribbon Singapore, Christian halfway houses, churches, foundations, private corporations, government and other social service agencies.</p>
-        <p>We are delighted that together, we can celebrate the positive impact made in breaking the cycle of crime and giving ex-offenders a second chance in their personal rehabilitation, reconciliation and reintegration journeys.</p>
+      <div class="beginnings-inner">
+        <h2 class="reveal">Our Beginnings</h2>
+        <div class="beginnings-top">
+          <div class="image reveal" role="img" aria-label="Reverend Khoo Siaw Hua"></div>
+          <div class="copy reveal">
+            <p>Our journey can be traced back to the early 1950s. Secret society activities were rampant and the prisons held many gangsters behind bars. <strong><em>Reverend Khoo Siaw Hua</em></strong> (a Methodist pastor) received a letter from an English inspector working at Changi Prison, inviting him to be the pastor for the prison. In that letter were these famous words:</p>
+            <blockquote>&ldquo;These men fear no man nor law, but try to get them to fear God.&rdquo;</blockquote>
+            <p>Moved by the plea and led by the spirit, Reverend Khoo responded to that call and began his service in prison with the goal of conveying God&apos;s love to the convicts.</p>
+          </div>
+        </div>
+        <div class="beginnings-bottom">
+          <div class="copy reveal">
+            <p>Reverend Khoo Siaw Hua served the prison community until his death in 1985. A decade before his passing, his son and successor, <strong><em>Reverend Henry Khoo</em></strong> was appointed Honorary Senior Chaplain and he continued his father&apos;s legacy by holding out the light of Christ at Changi Prison. As a teacher, he was posted to pioneer the Prison School. Despite his initial reluctance to be involved with prison work, he knew later that there was no &ldquo;getting around God&apos;s will&rdquo;. In 1968, he began his work in Changi Prison.</p>
+            <p>Through the pioneering work of Reverend Khoo Siaw Hua and the faithful labour of Reverend Henry Khoo, the prison ministry has come a long way since 1953. God has used both men to touch the lives of many. Today, Prison Fellowship Singapore has the privilege of working alongside our valued partners to continue this work. We cannot do this work by ourselves and wish to recognise the contributions and support of our dedicated team of volunteers and eco-system partners, such as the Singapore Prison Service, Yellow Ribbon Singapore, Christian halfway houses, churches, foundations, private corporations, government and other social service agencies. We are delighted that together, we can celebrate the positive impact made in breaking the cycle of crime and giving ex-offenders a second chance in their personal rehabilitation, reconciliation and reintegration journeys.</p>
+          </div>
+          <div class="history-image reveal" role="img" aria-label="Prison Fellowship Singapore history"></div>
+        </div>
       </div>
     </section>
 
