@@ -270,87 +270,49 @@
 
     .vision {
       position: relative;
-      min-height: 800px;
+      min-height: 824px;
       display: flex;
       align-items: center;
       background:
-        linear-gradient(90deg, rgba(255,245,223,.68), rgba(255,255,255,.14) 51%, rgba(0,0,0,.38)),
+        linear-gradient(90deg, rgba(0,0,0,.14), rgba(0,0,0,.04) 48%, rgba(0,0,0,.28)),
         url("https://images.squarespace-cdn.com/content/v1/5f5f154a6907c141ae06e408/1700708060385-FMJADYXYMHPVB596DUTA/image-asset.jpeg?format=1500w") center / cover no-repeat;
     }
 
     .vision-inner {
-      width: min(var(--max), calc(100% - 76px));
+      width: min(1214px, calc(100% - 64px));
+      min-height: 690px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 45%;
-      gap: 64px;
+      grid-template-columns: 2fr 1fr;
     }
 
     .vision-copy {
       grid-column: 2;
+      display: grid;
+      align-content: space-between;
+      max-width: 390px;
       color: #fff;
       text-shadow: 0 3px 15px rgba(0,0,0,.42);
     }
 
-    .eyebrow {
-      margin: 0 0 22px;
-      color: var(--pink-light);
-      font-family: var(--display);
-      font-size: clamp(38px, 4.7vw, 54px);
-      font-weight: 800;
-      line-height: 1;
-      text-shadow: none;
-    }
+    .vision-item { margin: 0; }
 
+    .vision-copy h2,
     .vision-copy h3 {
-      margin: 34px 0 11px;
+      margin: 0 0 35px;
       color: var(--pink-light);
-      font-family: var(--display);
-      font-size: 28px;
-      line-height: 1.05;
+      font-family: Arial, sans-serif;
+      font-size: clamp(39px, 3.2vw, 45px);
+      font-weight: 800;
+      line-height: 1.08;
       text-shadow: none;
     }
 
-    .vision-copy p { font-size: 17px; font-weight: 600; }
-
-    .values-band { padding: 43px 0; background: #d0d0d0; }
-
-    .values {
-      width: min(var(--max), calc(100% - 76px));
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 45px;
-    }
-
-    .value-card {
-      min-height: 172px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 22px 18px;
-      text-align: center;
-      background: rgba(255,255,255,.92);
-      transition: transform .28s ease, box-shadow .28s ease;
-    }
-
-    .value-card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 17px 34px rgba(0,0,0,.14);
-    }
-
-    .value-card h4 {
-      margin: 0 0 7px;
-      color: var(--pink-light);
-      font-size: 20px;
-      font-weight: 700;
-    }
-
-    .value-card p {
+    .vision-copy p {
       margin: 0;
-      color: #858187;
-      font-size: 14px;
-      line-height: 1.55;
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.7;
     }
 
     .partners {
@@ -855,7 +817,6 @@
       .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 54px; }
       .vision-inner { grid-template-columns: 1fr; }
       .vision-copy { grid-column: auto; max-width: 590px; margin-left: auto; }
-      .values { grid-template-columns: repeat(2, 1fr); gap: 20px; }
       .footer-meta { text-align: left; }
       .footer-links { justify-content: flex-start; }
       .modal { grid-template-columns: 1fr; }
@@ -866,7 +827,6 @@
     @media (max-width: 650px) {
       .section,
       .vision-inner,
-      .values,
       .impact-grid,
       .footer-inner { width: calc(100% - 32px); }
       .beginnings-inner { width: calc(100% - 32px); }
@@ -874,8 +834,10 @@
       .hero { min-height: 400px; }
       .photo-mosaic { grid-template-columns: 1fr; }
       .photo.wide { grid-column: auto; aspect-ratio: 1.45 / 1; }
-      .vision { min-height: 650px; }
-      .values, .impact-grid { grid-template-columns: 1fr; }
+      .vision { min-height: 790px; }
+      .vision-inner { min-height: auto; padding: 72px 0; }
+      .vision-copy { gap: 64px; }
+      .impact-grid { grid-template-columns: 1fr; }
       .milestones { padding: 58px 0 70px; }
       .milestones .section-title,
       .milestone-layout { width: calc(100% - 32px); }
@@ -1001,23 +963,19 @@
     <section class="vision" id="work">
       <div class="vision-inner">
         <div class="vision-copy reveal">
-          <h2 class="eyebrow">Our Vision</h2>
-          <p>A Christian community that embraces prisoners, ex-offenders, and their families with God&apos;s love and transformative power.</p>
-          <h3>Our Mission</h3>
-          <p>To mobilise, engage and equip the Christian community to minister to prisoners, ex-offenders, and their families, enabling them to be a blessing to society.</p>
-          <h3>Our Values</h3>
-          <p><strong>Humility, Integrity, Stewardship,<br />Love &amp; Unity</strong></p>
+          <div class="vision-item">
+            <h2>Our Vision</h2>
+            <p>A Christian community that embraces prisoners, ex-offenders, and their families with God&apos;s love and transformative power.</p>
+          </div>
+          <div class="vision-item">
+            <h3>Our Mission</h3>
+            <p>To mobilise, engage and equip the Christian community to minister to prisoners, ex-offenders, and their families, enabling them to be a blessing to society.</p>
+          </div>
+          <div class="vision-item">
+            <h3>Our Values</h3>
+            <p>Humility, Integrity, Stewardship,<br />Love &amp; Unity</p>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="values-band" aria-label="Our values">
-      <div class="values">
-        <article class="value-card reveal"><h4>Humility</h4><p>We honour one another with Christ-like servitude.</p></article>
-        <article class="value-card reveal"><h4>Integrity</h4><p>We endeavour to be honest, upright and trustworthy.</p></article>
-        <article class="value-card reveal"><h4>Stewardship</h4><p>We account to God for all resources entrusted to us.</p></article>
-        <article class="value-card reveal"><h4>Love</h4><p>We appreciate and embrace all with God&apos;s love.</p></article>
-        <article class="value-card reveal"><h4>Unity</h4><p>We work as one body with diverse giftings to fulfil our mission.</p></article>
       </div>
     </section>
 
