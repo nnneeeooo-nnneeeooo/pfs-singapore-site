@@ -315,6 +315,45 @@
       line-height: 1.7;
     }
 
+    .values-band {
+      padding: 58px 0 64px;
+      background: #c9cacc;
+    }
+
+    .values {
+      width: calc(100% - 116px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 60px;
+    }
+
+    .value-card {
+      min-height: 158px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 24px 26px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .value-card h4 {
+      margin: 0 0 11px;
+      color: var(--pink);
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .value-card p {
+      margin: 0;
+      color: #08080a;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
     .partners {
       display: grid;
       grid-template-columns: 1fr 48%;
@@ -817,6 +856,7 @@
       .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 54px; }
       .vision-inner { grid-template-columns: 1fr; }
       .vision-copy { grid-column: auto; max-width: 590px; margin-left: auto; }
+      .values { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
       .footer-meta { text-align: left; }
       .footer-links { justify-content: flex-start; }
       .modal { grid-template-columns: 1fr; }
@@ -827,6 +867,7 @@
     @media (max-width: 650px) {
       .section,
       .vision-inner,
+      .values,
       .impact-grid,
       .footer-inner { width: calc(100% - 32px); }
       .beginnings-inner { width: calc(100% - 32px); }
@@ -837,6 +878,8 @@
       .vision { min-height: 790px; }
       .vision-inner { min-height: auto; padding: 72px 0; }
       .vision-copy { gap: 64px; }
+      .values { grid-template-columns: 1fr; gap: 16px; }
+      .values-band { padding: 32px 0; }
       .impact-grid { grid-template-columns: 1fr; }
       .milestones { padding: 58px 0 70px; }
       .milestones .section-title,
@@ -976,6 +1019,16 @@
             <p>Humility, Integrity, Stewardship,<br />Love &amp; Unity</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="values-band" aria-label="Our values">
+      <div class="values">
+        <article class="value-card reveal"><h4>Humility</h4><p>We honour one another with Christ-like servitude.</p></article>
+        <article class="value-card reveal"><h4>Integrity</h4><p>We endeavour to be honest, upright and trustworthy.</p></article>
+        <article class="value-card reveal"><h4>Stewardship</h4><p>We account to God for all resources entrusted to us.</p></article>
+        <article class="value-card reveal"><h4>Love</h4><p>We appreciate and embrace all with God&apos;s love.</p></article>
+        <article class="value-card reveal"><h4>Unity</h4><p>We work as one body with diverse giftings to fulfil our mission.</p></article>
       </div>
     </section>
 
