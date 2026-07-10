@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Board | Prison Fellowship Singapore</title>
+  <style>
+    :root { --pink: #df0a4f; --ink: #171518; --gray: #676767; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: #fff; font-family: Arial, Helvetica, sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    .site-header { position: fixed; inset: 0 0 auto; z-index: 20; min-height: 138px; display: flex; align-items: center; color: #fff; background: var(--pink); border-bottom: 2px solid #fff; }
+    .header-inner { width: calc(100% - 112px); margin: 0 auto; display: grid; grid-template-columns: 210px minmax(0, 1fr) auto; gap: 31px; align-items: center; }
+    .brand { display: block; width: 205px; }
+    .brand img { display: block; width: 100%; height: auto; }
+    .nav { display: flex; align-items: center; gap: 23px; font-size: 16px; white-space: nowrap; }
+    .nav a { padding: 8px 0; }
+    .nav a:hover, .nav a[aria-current="page"] { border-bottom: 1px solid #fff; }
+    .actions { display: flex; align-items: center; gap: 28px; font-size: 21px; font-weight: 800; }
+    .socials { display: flex; gap: 16px; align-items: center; }
+    .donate { min-width: 126px; padding: 22px 22px; color: var(--pink); background: #fff; border-radius: 999px; font-size: 13px; font-weight: 700; text-align: center; }
+    main { padding-top: 138px; }
+    .hero { min-height: 284px; display: grid; place-items: center; color: #fff; background: linear-gradient(rgba(0,0,0,.22), rgba(0,0,0,.3)), url("https://images.squarespace-cdn.com/content/v1/5f5f154a6907c141ae06e408/1700708060385-FMJADYXYMHPVB596DUTA/image-asset.jpeg?format=1500w") center 56% / cover no-repeat; }
+    .hero h1 { margin: 0; font-size: clamp(46px, 5vw, 72px); letter-spacing: 0; }
+    .board { width: min(1340px, calc(100% - 96px)); margin: 0 auto; padding: 80px 0 110px; }
+    .board-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 64px 34px; }
+    .member { min-width: 0; }
+    .member img { display: block; width: 100%; aspect-ratio: 1 / 1.1; object-fit: cover; object-position: center top; background: #e3e3e3; }
+    .member h2 { margin: 20px 0 8px; color: var(--pink); font-size: 24px; line-height: 1.18; }
+    .role { margin: 0 0 12px; font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .title { margin: 0; font-size: 15px; line-height: 1.58; }
+    .site-footer { padding: 41px 0 47px; color: #fff; background: var(--gray); border-top: 4px solid #d1d2d4; }
+    .footer-inner { width: min(1114px, calc(100% - 64px)); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 49px; font-size: 16px; line-height: 1.8; }
+    .footer-inner p { margin: 0 0 19px; }
+    .footer-inner a { text-decoration: underline; }
+    .footer-title { margin: 0 0 7px; font-size: 16px; font-weight: 800; }
+    .policy { display: grid; gap: 5px; margin-top: 18px; }
+    @media (max-width: 1280px) { .header-inner { width: calc(100% - 64px); grid-template-columns: 180px minmax(0, 1fr) auto; gap: 20px; } .brand { width: 176px; } .nav { gap: 14px; font-size: 14px; } .actions { gap: 14px; } .donate { min-width: 110px; } }
+    @media (max-width: 980px) { .site-header { min-height: 96px; } .header-inner { width: calc(100% - 40px); grid-template-columns: 1fr auto; } .brand { width: 170px; } .nav, .actions { display: none; } main { padding-top: 96px; } .board-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .footer-inner { grid-template-columns: 1fr; } }
+    @media (max-width: 580px) { .hero { min-height: 220px; } .board { width: calc(100% - 32px); padding: 48px 0 68px; } .board-grid { grid-template-columns: 1fr; gap: 46px; } .footer-inner { width: calc(100% - 32px); } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Prison Fellowship Singapore home"><img src="https://images.squarespace-cdn.com/content/v1/5f5f154a6907c141ae06e408/1603089983404-UH4OZE52ITOR2Y26P2PF/PFS+White+Logo.png?format=1500w" alt="Prison Fellowship Singapore" /></a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html#about">About Us</a><a href="index.html#work">Our Work</a><a href="index.html#stories">Our Stories</a><a href="our-board.html" aria-current="page">Our Team</a><a href="index.html#involved">Get Involved</a><a href="https://www.70x7.sg/" target="_blank" rel="noopener">70x7</a>
+      </nav>
+      <div class="actions"><div class="socials" aria-label="Social links"><a href="https://www.facebook.com/prisonfellowshipsingapore" target="_blank" rel="noopener">f</a><a href="https://www.instagram.com/prisonfellowshipsg/" target="_blank" rel="noopener">ig</a><a href="http://www.youtube.com/@prisonfellowshipsg" target="_blank" rel="noopener">&#9654;</a><a href="https://sg.linkedin.com/company/prisonfellowshipsg" target="_blank" rel="noopener">in</a></div><a class="donate" href="https://pfs.org.sg/donate">DONATE</a></div>
+    </div>
+  </header>
+  <main>
+    <section class="hero"><h1>Our Board</h1></section>
+    <section class="board" aria-label="Board members">
+      <div class="board-grid">
+        <article class="member"><img src="https://images.squarespace-cdn.com/content/v1/5f5f154a6907c141ae06e408/1658808680768-I3VCDTRM60HL4K58KKXN/Gregory%252BVijayendran.jpg" alt="Gregory Vijayendran" /><h2>Gregory Vijayendran</h2><p class="role">CHAIRMAN</p><p class="title">Senior Counsel &amp; Partner, Dispute Resolution,<br />Rajah &amp; Tann</p></article>
+        <article class="member"><img src="https://images.squarespace-cdn.com/content/v1/5f5f154a6907c141ae06e408/d00792f6-08eb-47bf-90fe-c45f272d6bf5/thumbnail_image0.jpg" alt="Yeng Ngai Seng, Kenny" /><h2>Yeng Ngai Seng, Kenny</h2><p class="role">DIRECTOR</p><p class="title">Senior Vice President, Portfolio Manager at GIC</p></article>
+        <article class="member"><img src="https://images.squarespace-cdn.com/content/v1/5f5f154a6907c141ae06e408/1655692956869-PFZ2EHNSNOOZENBYRWTG/Jeann%2BLow.jpg" alt="Jeann Low Ngiap Jong" /><h2>Jeann Low Ngiap Jong</h2><p class="role">DIRECTOR</p><p class="title">Senior Advisor, Singtel</p></article>
+        <article class="member"><img src="https://images.squarespace-cdn.com/content/v1/5f5f154a6907c141ae06e408/037df06d-4371-4896-8769-abf15031dde7/29866676-0016-45ad-b87c-3b07eb70995e.jpg" alt="Soh Wai Wah" /><h2>Soh Wai Wah</h2><p class="role">DIRECTOR</p><p class="title">Principal &amp; CEO, Singapore Polytechnic</p></article>
+        <article class="member"><img src="https://images.squarespace-cdn.com/content/v1/5f5f154a6907c141ae06e408/7435cecc-1668-4706-9b22-5f3e08f927a1/VVS-Bridgestone_Paul-4263%28HI%29.jpeg" alt="Paul Choo" /><h2>Paul Choo</h2><p class="role">DIRECTOR</p><p class="title">Chief Human Resources Officer (CHRO), Bridgestone Asia Pacific</p></article>
+        <article class="member"><img src="https://images.squarespace-cdn.com/content/v1/5f5f154a6907c141ae06e408/21d7a359-9fc8-44d5-9c5d-4aaf37a92166/Lisa%2BTheng.PNG" alt="Lisa Theng" /><h2>Lisa Theng</h2><p class="role">DIRECTOR</p><p class="title">Managing Partner at CNPLaw LLP</p></article>
+        <article class="member"><img src="https://images.squarespace-cdn.com/content/v1/5f5f154a6907c141ae06e408/1f1836c2-dd27-4e10-be56-b6dff01ce2fc/Wilson%2BMack_image.png" alt="Wilson Mack Wing Hung" /><h2>Wilson Mack Wing Hung</h2><p class="role">DIRECTOR</p><p class="title">Senior Director<br />Thye Hua Kwan Moral Charities</p></article>
+        <article class="member"><img src="https://images.squarespace-cdn.com/content/v1/5f5f154a6907c141ae06e408/c09570cf-55d2-4070-b495-b3b21933248c/Jared_Image.jpeg" alt="Jared Chng Sing Yeong" /><h2>Jared Chng Sing Yeong</h2><p class="role">DIRECTOR</p><p class="title">Chief Financial Officer<br />ENGIE South East Asia</p></article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><div><p class="footer-title">Prison Fellowship Singapore</p><p>Level 3 @ Reverend Canon Samuel Baboo Block<br />1 Dorset Road S219486</p><p><a href="mailto:enquiry@pfs.org.sg">enquiry@pfs.org.sg</a><br />call <a href="tel:+6563842338">+65 6384 2338</a></p></div><div><p>Prison Fellowship Singapore Limited (PFS) was registered under the Charities Act on 3 December 1992.</p><p>Charity Number 0926 | Unique Entity Number (UEN) 197400953N</p><p>Copyright &copy;2026 <a href="index.html">Prison Fellowship Singapore.</a><br />All Rights Reserved.</p><div class="policy"><a href="https://www.pfs.org.sg/privacy-policy">Privacy Policy</a><a href="https://pfs.org.sg/whistleblowing-policy">Whistleblowing Policy</a></div></div></div></footer>
+</body>
+</html>
