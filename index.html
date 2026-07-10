@@ -36,7 +36,10 @@
     button { font: inherit; }
 
     .site-header {
-      position: relative;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
       z-index: 40;
       min-height: 178px;
       display: flex;
@@ -44,6 +47,10 @@
       color: #fff;
       background: var(--pink);
     }
+
+    main { padding-top: 178px; }
+
+    section[id] { scroll-margin-top: 196px; }
 
     .header-inner {
       width: calc(100% - 112px);
@@ -825,12 +832,14 @@
 
     @media (max-width: 1090px) {
       .site-header { min-height: 96px; }
+      main { padding-top: 96px; }
+      section[id] { scroll-margin-top: 112px; }
       .header-inner { grid-template-columns: 1fr auto; width: calc(100% - 40px); }
       .brand { width: 170px; }
       .nav, .header-actions { display: none; }
       .mobile-toggle { display: block; }
       .mobile-panel.is-open {
-        position: absolute;
+        position: fixed;
         top: 96px;
         left: 0;
         right: 0;
